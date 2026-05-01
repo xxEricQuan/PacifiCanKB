@@ -2,14 +2,18 @@
 const config = {
   title: 'My Docs',
   tagline: 'Documentation site',
-  url: 'https://YOUR_GITHUB_USERNAME.github.io',
-  baseUrl: '/YOUR_REPO_NAME/',
+  url: 'https://xxEricQuan.github.io',
+  baseUrl: '/PacifiCanKB/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   organizationName: 'xxEricQuan',
   projectName: 'PacifiCanKB',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   future: {
     v4: {
       mdx1CompatDisabledByDefault: true,
@@ -19,7 +23,10 @@ const config = {
     [
       'classic',
       ({
-        docs: { sidebarPath: require.resolve('./sidebars.js') },
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
+        },
         blog: false,
         theme: { customCss: require.resolve('./src/css/custom.css') },
       }),
