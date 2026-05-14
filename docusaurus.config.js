@@ -32,6 +32,17 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
 };
 
 module.exports = config;
